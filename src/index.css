@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --primary: #FFAA2A;
+    --dark: #202023;
+    --subDark: #1d1e22;
+    --white: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'varnabold';
+    src: url('./font/fontsfree-net-varna-bold-webfont.woff2') format('woff2'), url('./font/fontsfree-net-varna-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.btn,
+.jumbotron,
+.nav :hover {
+    border-radius: 0px;
+}
+
+body {
+    background: var(--dark);
+}
+
+.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    transition: border-bottom .5s ease-in-out;
+}
+
+.nav {
+    color: var(--white);
+}
+
+.navTop {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navTop:hover {
+    color: var(--primary);
+}
+
+.nav:hover {
+    color: var(--primary);
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.base {
+    min-height: 100vh;
+}
+
+.circle {
+    display: flex;
+    margin: auto;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.ring {
+    display: flex;
+    margin: auto;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--subDark);
+}
+
+.ring1 {
+    display: flex;
+    margin: auto;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--primary);
+}
+
+.ring2 {
+    display: flex;
+    margin: auto;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--subDark);
+}
+
+.ring3 {
+    display: flex;
+    margin: auto;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--primary);
+}
+
+.ring4 {
+    display: flex;
+    margin: auto;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--subDark);
+}
+
+.ring5 {
+    display: flex;
+    margin: auto;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: "transparent";
+    border: 14px solid var(--primary);
+}
+
+img {
+    animation: MoveUpDown 5s linear infinite;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transform: scale(0.9);
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.navHead {
+    font-family: varnabold;
+    color: #ffaa2a;
+    margin: auto;
+}
+
+.mainHead {
+    font-family: varnabold;
+    font-size: 6.5vw;
+    text-align: left;
+    color: #ffaa2a;
+}
+
+.mainBody {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5vw;
+    /* font-size: 26px; */
+    text-align: left;
+    color: #eeeeee;
+}
+
+@media only screen and (max-width: 600px) {
+    .base {
+        min-height: 10vh;
+    }
+    @keyframes MoveUpDown {
+        0%,
+        100% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    .circle {
+        width: 70vw;
+        height: 70vw;
+    }
+    .ring {
+        width: 70vw;
+        height: 70vw;
+    }
+    .ring1 {
+        width: 65vw;
+        height: 65vw;
+    }
+    .ring2 {
+        width: 60vw;
+        height: 60vw;
+    }
+    .ring3 {
+        width: 55vw;
+        height: 55vw;
+    }
+    .ring4 {
+        width: 45vw;
+        height: 45vw;
+    }
+    .ring5 {
+        width: 40vw;
+        height: 40vw;
+    }
+    .mainHead {
+        font-size: 10vw;
+    }
+    .mainBody {
+        font-size: 4vw;
+        /* font-size: 26px; */
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .base {
+        min-height: 10vh;
+    }
 }
